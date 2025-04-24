@@ -3,7 +3,7 @@ import os
 import random
 
 # ====== パスワード設定 ======
-PASSWORD = "とりだいすき"
+PASSWORD = "toridaisuki"
 
 if "authenticated" not in st.session_state:
     st.session_state.authenticated = False
