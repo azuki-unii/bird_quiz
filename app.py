@@ -40,7 +40,8 @@ else:
         current_file = st.session_state.files[st.session_state.index]
         bird_name = os.path.splitext(current_file)[0]
 
-        st.audio(os.path.join(AUDIO_FOLDER, current_file), format="audio/mp3")
+         with open(f"data/{current_file}", "rb") as audio_file:
+    st.audio(audio_file.read(), format="audio/mp3")
 
         answer = st.text_input("この鳴き声はどの鳥の鳴き声ですか？")
 
