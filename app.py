@@ -13,7 +13,7 @@ if not st.session_state.authenticated:
     pwd = st.text_input("パスワードを入力してください", type="password")
     if pwd == PASSWORD:
         st.session_state.authenticated = True
-        st.experimental_rerun()
+        st.rerun()
     elif pwd:
         st.error("パスワードが違います")
 else:
